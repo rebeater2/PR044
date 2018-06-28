@@ -1,0 +1,46 @@
+module cic_filter(
+input clk,
+input rst,
+output [15:0]data_out
+);
+
+reg [21:0]addr;//92160
+wire data_in;
+reg [15: 0]cic_out;
+reg in_ready,out_en;
+
+always @(clk,rst)begin
+	if(rst)
+	addr <= 0;
+	else begin
+	if(addr >= 21'd92160)
+	addr <= 0;
+	else
+	addr <= addr+ 1;
+	end
+end
+
+
+rom1	rom1_inst (
+	.address ( addr ),
+	.clock ( clk ),
+	.q ( data_in )
+	);
+
+	cic u0 (      // X32 
+		.clk       (clk),       //     clock.clk
+		.reset_n   (rst),   //     reset.reset_n
+		.in_error  (2'b00),  //  av_st_in.error
+		.in_valid  (1),  //   Asserted when data at in_data is valid. 
+		.in_ready  (in_ready),  // Output,indicates when the IP core can accept data.
+		.in_data   (data_in),   //          .in_data
+		.out_data  (cic_out[15:0]),  // av_st_out.out_data
+		.out_error (), //          .error
+		.out_valid (out_en), //output;Asserted by the IP core when there is valid data to output
+		.out_ready (1)  //input; Asserted by the downstream module if it is able to accept data.
+	);
+
+
+	assign data_out[15:0] = out_en?cic_out[15:0]:data_out[15:0] ;
+	
+endmodule

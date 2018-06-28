@@ -1,0 +1,36 @@
+module blink(
+input sw[1:0],
+output LED[1:0]
+);
+
+
+reg[31:0] cnt;
+initial
+reg clk_en <= 1;
+reg dataa[1:0] =sw;
+reg reset =1;
+
+    myNois2 u0 (
+        .clk    (clk),    // s1.clk
+        .clk_en (clk_en), //   .clk_en
+        .dataa  (dataa),  //   .dataa
+      
+        .reset  (reset),  //   .reset
+        
+        
+        .result (led)  //   .result
+    );
+
+
+begin
+	cnt<=32'h00000000;
+	end
+	
+	always@(posedge clk)
+	begin
+	cnt = cnt+1;
+	end
+	assign LED = cnt[24];
+	
+endmodule
+	

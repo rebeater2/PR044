@@ -1,0 +1,1094 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# Date created = 11:08:38  April 08, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		blink_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7
+set_global_assignment -name TOP_LEVEL_ENTITY blink
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:08:38  APRIL 08, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_MDC
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_MDIO
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_RXD0
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_RXD1
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_RXD2
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_RXD3
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_RX_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_RX_CTL
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_TXD0
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_TXD1
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_TXD2
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_TXD3
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_TX_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_emac1_inst_TX_CTL
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_gpio_inst_GPIO09
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_gpio_inst_GPIO35
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_gpio_inst_GPIO40
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_gpio_inst_GPIO53
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_gpio_inst_GPIO54
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_gpio_inst_GPIO61
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_i2c0_inst_SCL
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_i2c0_inst_SDA
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_i2c1_inst_SCL
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_i2c1_inst_SDA
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_sdio_inst_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_sdio_inst_CMD
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_sdio_inst_D0
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_sdio_inst_D1
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_sdio_inst_D2
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_sdio_inst_D3
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_spim1_inst_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_spim1_inst_MOSI
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_spim1_inst_SS0
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_uart0_inst_RX
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_uart0_inst_TX
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D0
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D1
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D2
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D3
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D4
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D5
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D6
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_D7
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_DIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_NXT
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to hps_io_hps_io_usb1_inst_STP
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_MDC
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_MDIO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_RXD0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_RXD1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_RXD2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_RXD3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_RX_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_RX_CTL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_TXD0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_TXD1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_TXD2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_TXD3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_TX_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_emac1_inst_TX_CTL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_gpio_inst_GPIO09
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_gpio_inst_GPIO35
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_gpio_inst_GPIO40
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_gpio_inst_GPIO53
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_gpio_inst_GPIO54
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_gpio_inst_GPIO61
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_i2c0_inst_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_i2c0_inst_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_i2c1_inst_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_i2c1_inst_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_sdio_inst_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_sdio_inst_CMD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_sdio_inst_D0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_sdio_inst_D1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_sdio_inst_D2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_sdio_inst_D3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_spim1_inst_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_spim1_inst_MISO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_spim1_inst_MOSI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_spim1_inst_SS0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_uart0_inst_RX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_uart0_inst_TX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_D7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_DIR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_NXT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hps_io_hps_io_usb1_inst_STP
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2C_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2C_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2S
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_LRCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_MCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_DE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_INT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_VS
+
+
+
+
+set_location_assignment PIN_C28 -to hps_memory_mem_a[0]
+set_location_assignment PIN_A24 -to hps_memory_mem_a[10]
+set_location_assignment PIN_B24 -to hps_memory_mem_a[11]
+set_location_assignment PIN_D24 -to hps_memory_mem_a[12]
+set_location_assignment PIN_C24 -to hps_memory_mem_a[13]
+set_location_assignment PIN_G23 -to hps_memory_mem_a[14]
+set_location_assignment PIN_B28 -to hps_memory_mem_a[1]
+set_location_assignment PIN_E26 -to hps_memory_mem_a[2]
+set_location_assignment PIN_D26 -to hps_memory_mem_a[3]
+set_location_assignment PIN_J21 -to hps_memory_mem_a[4]
+set_location_assignment PIN_J20 -to hps_memory_mem_a[5]
+set_location_assignment PIN_C26 -to hps_memory_mem_a[6]
+set_location_assignment PIN_B26 -to hps_memory_mem_a[7]
+set_location_assignment PIN_F26 -to hps_memory_mem_a[8]
+set_location_assignment PIN_F25 -to hps_memory_mem_a[9]
+set_location_assignment PIN_A27 -to hps_memory_mem_ba[0]
+set_location_assignment PIN_H25 -to hps_memory_mem_ba[1]
+set_location_assignment PIN_G25 -to hps_memory_mem_ba[2]
+set_location_assignment PIN_A26 -to hps_memory_mem_cas_n
+set_location_assignment PIN_N21 -to hps_memory_mem_ck
+set_location_assignment PIN_N20 -to hps_memory_mem_ck_n
+set_location_assignment PIN_L28 -to hps_memory_mem_cke
+set_location_assignment PIN_L21 -to hps_memory_mem_cs_n
+set_location_assignment PIN_G28 -to hps_memory_mem_dm[0]
+set_location_assignment PIN_P28 -to hps_memory_mem_dm[1]
+set_location_assignment PIN_W28 -to hps_memory_mem_dm[2]
+set_location_assignment PIN_AB28 -to hps_memory_mem_dm[3]
+set_location_assignment PIN_J25 -to hps_memory_mem_dq[0]
+set_location_assignment PIN_J27 -to hps_memory_mem_dq[10]
+set_location_assignment PIN_J28 -to hps_memory_mem_dq[11]
+set_location_assignment PIN_M27 -to hps_memory_mem_dq[12]
+set_location_assignment PIN_M26 -to hps_memory_mem_dq[13]
+set_location_assignment PIN_M28 -to hps_memory_mem_dq[14]
+set_location_assignment PIN_N28 -to hps_memory_mem_dq[15]
+set_location_assignment PIN_N24 -to hps_memory_mem_dq[16]
+set_location_assignment PIN_N25 -to hps_memory_mem_dq[17]
+set_location_assignment PIN_T28 -to hps_memory_mem_dq[18]
+set_location_assignment PIN_U28 -to hps_memory_mem_dq[19]
+set_location_assignment PIN_J24 -to hps_memory_mem_dq[1]
+set_location_assignment PIN_N26 -to hps_memory_mem_dq[20]
+set_location_assignment PIN_N27 -to hps_memory_mem_dq[21]
+set_location_assignment PIN_R27 -to hps_memory_mem_dq[22]
+set_location_assignment PIN_V27 -to hps_memory_mem_dq[23]
+set_location_assignment PIN_R26 -to hps_memory_mem_dq[24]
+set_location_assignment PIN_R25 -to hps_memory_mem_dq[25]
+set_location_assignment PIN_AA28 -to hps_memory_mem_dq[26]
+set_location_assignment PIN_W26 -to hps_memory_mem_dq[27]
+set_location_assignment PIN_R24 -to hps_memory_mem_dq[28]
+set_location_assignment PIN_T24 -to hps_memory_mem_dq[29]
+set_location_assignment PIN_E28 -to hps_memory_mem_dq[2]
+set_location_assignment PIN_Y27 -to hps_memory_mem_dq[30]
+set_location_assignment PIN_AA27 -to hps_memory_mem_dq[31]
+set_location_assignment PIN_D27 -to hps_memory_mem_dq[3]
+set_location_assignment PIN_J26 -to hps_memory_mem_dq[4]
+set_location_assignment PIN_K26 -to hps_memory_mem_dq[5]
+set_location_assignment PIN_G27 -to hps_memory_mem_dq[6]
+set_location_assignment PIN_F28 -to hps_memory_mem_dq[7]
+set_location_assignment PIN_K25 -to hps_memory_mem_dq[8]
+set_location_assignment PIN_L25 -to hps_memory_mem_dq[9]
+set_location_assignment PIN_R17 -to hps_memory_mem_dqs[0]
+set_location_assignment PIN_R19 -to hps_memory_mem_dqs[1]
+set_location_assignment PIN_T19 -to hps_memory_mem_dqs[2]
+set_location_assignment PIN_U19 -to hps_memory_mem_dqs[3]
+set_location_assignment PIN_R16 -to hps_memory_mem_dqs_n[0]
+set_location_assignment PIN_R18 -to hps_memory_mem_dqs_n[1]
+set_location_assignment PIN_T18 -to hps_memory_mem_dqs_n[2]
+set_location_assignment PIN_T20 -to hps_memory_mem_dqs_n[3]
+set_location_assignment PIN_D28 -to hps_memory_mem_odt
+set_location_assignment PIN_A25 -to hps_memory_mem_ras_n
+set_location_assignment PIN_V28 -to hps_memory_mem_reset_n
+set_location_assignment PIN_E25 -to hps_memory_mem_we_n
+set_location_assignment PIN_D25 -to hps_memory_oct_rzqin
+
+set_location_assignment PIN_U10 -to HDMI_I2C_SCL
+set_location_assignment PIN_AA4 -to HDMI_I2C_SDA
+set_location_assignment PIN_T13 -to HDMI_I2S
+set_location_assignment PIN_T11 -to HDMI_LRCLK
+set_location_assignment PIN_U11 -to HDMI_MCLK
+set_location_assignment PIN_T12 -to HDMI_SCLK
+set_location_assignment PIN_AG5 -to HDMI_TX_CLK
+set_location_assignment PIN_AD12 -to HDMI_TX_D[0]
+set_location_assignment PIN_AE12 -to HDMI_TX_D[1]
+set_location_assignment PIN_W8 -to HDMI_TX_D[2]
+set_location_assignment PIN_Y8 -to HDMI_TX_D[3]
+set_location_assignment PIN_AD11 -to HDMI_TX_D[4]
+set_location_assignment PIN_AD10 -to HDMI_TX_D[5]
+set_location_assignment PIN_AE11 -to HDMI_TX_D[6]
+set_location_assignment PIN_Y5 -to HDMI_TX_D[7]
+set_location_assignment PIN_AF10 -to HDMI_TX_D[8]
+set_location_assignment PIN_Y4 -to HDMI_TX_D[9]
+set_location_assignment PIN_AE9 -to HDMI_TX_D[10]
+set_location_assignment PIN_AB4 -to HDMI_TX_D[11]
+set_location_assignment PIN_AE7 -to HDMI_TX_D[12]
+set_location_assignment PIN_AF6 -to HDMI_TX_D[13]
+set_location_assignment PIN_AF8 -to HDMI_TX_D[14]
+set_location_assignment PIN_AF5 -to HDMI_TX_D[15]
+set_location_assignment PIN_AE4 -to HDMI_TX_D[16]
+set_location_assignment PIN_AH2 -to HDMI_TX_D[17]
+set_location_assignment PIN_AH4 -to HDMI_TX_D[18]
+set_location_assignment PIN_AH5 -to HDMI_TX_D[19]
+set_location_assignment PIN_AH6 -to HDMI_TX_D[20]
+set_location_assignment PIN_AG6 -to HDMI_TX_D[21]
+set_location_assignment PIN_AF9 -to HDMI_TX_D[22]
+set_location_assignment PIN_AE8 -to HDMI_TX_D[23]
+set_location_assignment PIN_AD19 -to HDMI_TX_DE
+set_location_assignment PIN_T8 -to HDMI_TX_HS
+set_location_assignment PIN_AF11 -to HDMI_TX_INT
+set_location_assignment PIN_V13 -to HDMI_TX_VS
+
+set_location_assignment PIN_AH17 -to KEY[0]
+set_location_assignment PIN_AH16 -to KEY[1]
+set_location_assignment PIN_AH3 -to LED[0]
+set_location_assignment PIN_W14 -to LED[1]
+set_location_assignment PIN_Y17 -to LED[2]
+set_location_assignment PIN_AB26 -to LED[3]
+set_location_assignment PIN_AA26 -to LED[4]
+set_location_assignment PIN_AA11 -to LED[5]
+set_location_assignment PIN_Y16 -to LED[6]
+set_location_assignment PIN_AA23 -to LED[7]
+set_location_assignment PIN_Y24 -to SW[0]
+set_location_assignment PIN_W24 -to SW[1]
+set_location_assignment PIN_W21 -to SW[2]
+set_location_assignment PIN_W20 -to SW[3]
+
+
+
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_MDC
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_MDIO
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_RXD0
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_RXD1
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_RXD2
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_RXD3
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_RX_CLK
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_RX_CTL
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_TXD0
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_TXD1
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_TXD2
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_TXD3
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_TX_CLK
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_emac1_inst_TX_CTL
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_gpio_inst_GPIO09
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_gpio_inst_GPIO35
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_gpio_inst_GPIO40
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_gpio_inst_GPIO53
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_gpio_inst_GPIO54
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_gpio_inst_GPIO61
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_i2c0_inst_SCL
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_i2c0_inst_SDA
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_i2c1_inst_SCL
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_i2c1_inst_SDA
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_sdio_inst_CLK
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_sdio_inst_CMD
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_sdio_inst_D0
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_sdio_inst_D1
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_sdio_inst_D2
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_sdio_inst_D3
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_spim1_inst_CLK
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_spim1_inst_MOSI
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_spim1_inst_SS0
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_uart0_inst_RX
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_uart0_inst_TX
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_CLK
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D0
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D1
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D2
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D3
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D4
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D5
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D6
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_D7
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_DIR
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_NXT
+set_instance_assignment -name SLEW_RATE 1 -to hps_io_hps_io_usb1_inst_STP
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[0]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[10]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[11]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[12]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[13]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[14]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[1]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[2]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[3]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[4]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[5]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[6]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[7]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[8]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_a[9]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_ba[0]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_ba[1]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_ba[2]
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_cas_n
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_cke
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_cs_n
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_odt
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_ras_n
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_reset_n
+set_instance_assignment -name SLEW_RATE 1 -to hps_memory_mem_we_n
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_oct_rzqin -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[0] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[1] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[2] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[3] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[4] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[4] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[5] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[5] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[6] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[6] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[7] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[7] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[8] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[8] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[9] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[9] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[10] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[10] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[11] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[11] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[12] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[12] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[13] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[13] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[14] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[14] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[15] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[15] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[15] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[16] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[16] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[16] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[17] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[17] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[17] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[18] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[18] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[18] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[19] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[19] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[19] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[20] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[20] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[20] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[21] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[21] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[21] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[22] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[22] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[22] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[23] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[23] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[23] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[24] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[24] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[24] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[25] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[25] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[25] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[26] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[26] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[26] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[27] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[27] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[27] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[28] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[28] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[28] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[29] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[29] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[29] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[30] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[30] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[30] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dq[31] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[31] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dq[31] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs[0] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs[1] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs[2] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs[3] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs_n[0] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs_n[1] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs_n[2] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_dqs_n[3] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dqs_n[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[0] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[10] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[11] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[12] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[13] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[14] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[1] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[2] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[3] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[4] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[5] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[6] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[7] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[8] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_a[9] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_a[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_ba[0] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_ba[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_ba[1] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_ba[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_ba[2] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_ba[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_cas_n -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_cas_n -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_cke -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_cke -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_cs_n -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_cs_n -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_odt -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_odt -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_ras_n -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_ras_n -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_we_n -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_we_n -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_reset_n -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to hps_memory_mem_reset_n -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dm[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dm[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dm[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dm[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dm[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dm[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to hps_memory_mem_dm[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to hps_memory_mem_dm[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[4] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[5] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[6] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[7] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[8] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[9] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[10] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[11] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[12] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[13] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[14] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[15] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[16] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[17] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[18] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[19] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[20] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[21] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[22] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[23] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[24] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[25] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[26] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[27] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[28] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[29] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[30] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dq[31] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dm[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dm[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dm[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dm[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs_n[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs_n[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs_n[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_dqs_n[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[10] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[11] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[12] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[13] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[14] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[4] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[5] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[6] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[7] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[8] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_a[9] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_ba[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_ba[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_ba[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_cas_n -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_cke -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_cs_n -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_odt -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_ras_n -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_we_n -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_reset_n -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|ureset|phy_reset_mem_stable_n -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|ureset|phy_reset_n -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[0].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[0] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[1].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[1] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[2].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[2] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[3].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[3] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __hps_sdram_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|hps_0|hps_io|border|hps_sdram_inst -tag __hps_sdram_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|hps_0|hps_io|border|hps_sdram_inst|pll0|fbout -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "hps_memory_mem_ck(m)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_ck_n -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to hps_memory_mem_ck -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to hps_memory_mem_ck -tag __hps_sdram_p0
+set_instance_assignment -name D5_DELAY 2 -to hps_memory_mem_ck -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to hps_memory_mem_ck_n -tag __hps_sdram_p0
+set_instance_assignment -name D5_DELAY 2 -to hps_memory_mem_ck_n -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_ck -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to hps_memory_mem_ck_n -tag __hps_sdram_p0
+set_location_assignment PIN_V11 -to clk
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_location_assignment PIN_AC22 -to sensor_in[0]
+set_location_assignment PIN_AD17 -to sensor_in[1]
+set_location_assignment PIN_AD20 -to sensor_in[2]
+set_location_assignment PIN_AE24 -to sensor_in[3]
+set_location_assignment PIN_AE6 -to sensor_in[4]
+set_location_assignment PIN_AG14 -to sensor_in[5]
+set_location_assignment PIN_W11 -to clk_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sensor_in[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sensor_in[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sensor_in[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sensor_in[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sensor_in[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sensor_in[1]
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK2_50
+set_location_assignment PIN_Y13 -to FPGA_CLK2_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to KEY[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE rom2/rom1.v
+set_global_assignment -name QIP_FILE rom2/rom1.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n9.v
+set_global_assignment -name QIP_FILE rom2/rom_n9.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n8.v
+set_global_assignment -name QIP_FILE rom2/rom_n8.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n7.v
+set_global_assignment -name QIP_FILE rom2/rom_n7.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n6.v
+set_global_assignment -name QIP_FILE rom2/rom_n6.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n5.v
+set_global_assignment -name QIP_FILE rom2/rom_n5.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n4.v
+set_global_assignment -name QIP_FILE rom2/rom_n4.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n3.v
+set_global_assignment -name QIP_FILE rom2/rom_n3.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n2.v
+set_global_assignment -name QIP_FILE rom2/rom_n2.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n1.v
+set_global_assignment -name QIP_FILE rom2/rom_n1.qip
+set_global_assignment -name VERILOG_FILE rom2/rom_n0.v
+set_global_assignment -name QIP_FILE rom2/rom_n0.qip
+set_global_assignment -name QIP_FILE rom2/head_rom_bb.qip
+set_global_assignment -name VERILOG_FILE rom2/head_rom.v
+set_global_assignment -name QIP_FILE rom2/head_rom.qip
+set_global_assignment -name VERILOG_FILE PLL/sys_pll.v -library sys_pll
+set_global_assignment -name QIP_FILE PLL/sys_pll.qip
+set_global_assignment -name SOURCE_FILE PLL/sys_pll.cmp
+set_global_assignment -name VERILOG_FILE PLL/pll_reconfig.v -library pll_reconfig
+set_global_assignment -name QIP_FILE PLL/pll_reconfig.qip
+set_global_assignment -name SOURCE_FILE PLL/pll_reconfig.cmp
+set_global_assignment -name VERILOG_FILE PLL/pll.v -library pll
+set_global_assignment -name QIP_FILE PLL/pll.qip
+set_global_assignment -name SOURCE_FILE PLL/pll.cmp
+set_global_assignment -name VERILOG_FILE rom/vga_generator_new1.v
+set_global_assignment -name VERILOG_FILE rom/tail_rom.v
+set_global_assignment -name VERILOG_FILE rom/sine.v
+set_global_assignment -name VERILOG_FILE rom/rom1.v
+set_global_assignment -name VERILOG_FILE rom/ram.v
+set_global_assignment -name VERILOG_FILE rom/mult.v
+set_global_assignment -name VERILOG_FILE rom/I2C_WRITE_WDATA.v
+set_global_assignment -name VERILOG_FILE rom/I2C_HDMI_Config.v
+set_global_assignment -name VERILOG_FILE rom/I2C_Controller.v
+set_global_assignment -name VERILOG_FILE rom/head_rom.v
+set_global_assignment -name VERILOG_FILE rom/get_point.v
+set_global_assignment -name VERILOG_FILE rom/cos.v
+set_global_assignment -name QIP_FILE rom/tail_rom.qip
+set_global_assignment -name QIP_FILE rom/sine.qip
+set_global_assignment -name QIP_FILE rom/rom1.qip
+set_global_assignment -name QIP_FILE rom/ram.qip
+set_global_assignment -name QIP_FILE rom/mult.qip
+set_global_assignment -name QIP_FILE rom/cos.qip
+set_global_assignment -name QIP_FILE synthesis/cic_64.qip
+set_global_assignment -name QSYS_FILE cic_64.qsys
+set_global_assignment -name QIP_FILE pll_2400k_0002.qip
+set_global_assignment -name QIP_FILE pll_2400k.qip
+set_global_assignment -name QIP_FILE synthesis/cic7.qip
+set_global_assignment -name QIP_FILE synthesis/cic6.qip
+set_global_assignment -name QIP_FILE synthesis/cic5.qip
+set_global_assignment -name QIP_FILE synthesis/cic4.qip
+set_global_assignment -name QIP_FILE synthesis/cic3.qip
+set_global_assignment -name QIP_FILE synthesis/cic2.qip
+set_global_assignment -name QIP_FILE synthesis/cic_16.qip
+set_global_assignment -name SDC_FILE constrains/blink.sdc
+set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
+set_global_assignment -name VERILOG_FILE blink.v
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name VERILOG_FILE vpg_source/vpg_mode.v
+set_global_assignment -name VERILOG_FILE vpg_source/vpg.v
+set_global_assignment -name SOURCE_FILE vpg_source/vpg.h
+set_global_assignment -name VERILOG_FILE vpg_source/vga_generator_new.v
+set_global_assignment -name VERILOG_FILE vpg_source/vga_generator.v
+set_global_assignment -name VERILOG_FILE vpg_source/pll_controller.v
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "vpg:u_vpg|vga_generator_new:u_vga_generator|clk" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=1024" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "soc_system:u0|sound6_pio_export[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "soc_system:u0|sound6_pio_export[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "soc_system:u0|sound6_pio_export[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "soc_system:u0|sound6_pio_export[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "soc_system:u0|sound6_pio_export[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "soc_system:u0|sound6_pio_export[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "soc_system:u0|sound6_pio_export[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "soc_system:u0|sound6_pio_export[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "soc_system:u0|sound6_pio_export[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "soc_system:u0|sound6_pio_export[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "soc_system:u0|sound6_pio_export[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "soc_system:u0|sound6_pio_export[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "soc_system:u0|sound6_pio_export[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "soc_system:u0|sound6_pio_export[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "soc_system:u0|sound6_pio_export[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "soc_system:u0|sound6_pio_export[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "soc_system:u0|x_export[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "soc_system:u0|x_export[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "soc_system:u0|x_export[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "soc_system:u0|x_export[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "soc_system:u0|x_export[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "soc_system:u0|x_export[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "soc_system:u0|x_export[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "soc_system:u0|x_export[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "soc_system:u0|x_export[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "soc_system:u0|x_export[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "soc_system:u0|x_export[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "soc_system:u0|x_export[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "soc_system:u0|x_export[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "soc_system:u0|x_export[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "soc_system:u0|x_export[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "soc_system:u0|x_export[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "soc_system:u0|x_export[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "soc_system:u0|x_export[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "soc_system:u0|x_export[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "soc_system:u0|x_export[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "soc_system:u0|x_export[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "soc_system:u0|x_export[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "soc_system:u0|x_export[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "soc_system:u0|x_export[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "soc_system:u0|x_export[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "soc_system:u0|x_export[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "soc_system:u0|x_export[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "soc_system:u0|x_export[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "soc_system:u0|x_export[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "soc_system:u0|x_export[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "soc_system:u0|x_export[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "soc_system:u0|x_export[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "soc_system:u0|y_export[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "soc_system:u0|y_export[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "soc_system:u0|y_export[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "soc_system:u0|y_export[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "soc_system:u0|y_export[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "soc_system:u0|y_export[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "soc_system:u0|y_export[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "soc_system:u0|y_export[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "soc_system:u0|y_export[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "soc_system:u0|y_export[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "soc_system:u0|y_export[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "soc_system:u0|y_export[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "soc_system:u0|y_export[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "soc_system:u0|y_export[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "soc_system:u0|y_export[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "soc_system:u0|y_export[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "soc_system:u0|y_export[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "soc_system:u0|y_export[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "soc_system:u0|y_export[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "soc_system:u0|y_export[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "soc_system:u0|y_export[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "soc_system:u0|y_export[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "soc_system:u0|y_export[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "soc_system:u0|y_export[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "soc_system:u0|y_export[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "soc_system:u0|y_export[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "soc_system:u0|y_export[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "soc_system:u0|y_export[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "soc_system:u0|y_export[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "soc_system:u0|y_export[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "soc_system:u0|y_export[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "soc_system:u0|y_export[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "vpg:u_vpg|point_x[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "vpg:u_vpg|point_x[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "vpg:u_vpg|point_x[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "vpg:u_vpg|point_x[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "vpg:u_vpg|point_x[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "vpg:u_vpg|point_x[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "vpg:u_vpg|point_x[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "vpg:u_vpg|point_x[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "vpg:u_vpg|point_x[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "vpg:u_vpg|point_x[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "vpg:u_vpg|point_y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "vpg:u_vpg|point_y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "vpg:u_vpg|point_y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[93] -to "vpg:u_vpg|point_y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[94] -to "vpg:u_vpg|point_y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[95] -to "vpg:u_vpg|point_y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[96] -to "vpg:u_vpg|point_y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[97] -to "vpg:u_vpg|point_y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[98] -to "vpg:u_vpg|point_y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[99] -to "vpg:u_vpg|point_y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[100] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[101] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[102] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[103] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[104] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[105] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[106] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[107] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[108] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[109] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[110] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[111] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[112] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|num_en1" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[113] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|num_en2" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[114] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|num_en3" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[115] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[116] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[117] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[118] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[119] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[120] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[121] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[122] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[123] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[124] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[125] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[126] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "soc_system:u0|sound6_pio_export[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "soc_system:u0|sound6_pio_export[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "soc_system:u0|sound6_pio_export[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "soc_system:u0|sound6_pio_export[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "soc_system:u0|sound6_pio_export[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "soc_system:u0|sound6_pio_export[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "soc_system:u0|sound6_pio_export[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "soc_system:u0|sound6_pio_export[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "soc_system:u0|sound6_pio_export[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "soc_system:u0|sound6_pio_export[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "soc_system:u0|sound6_pio_export[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "soc_system:u0|sound6_pio_export[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "soc_system:u0|sound6_pio_export[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "soc_system:u0|sound6_pio_export[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "soc_system:u0|sound6_pio_export[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "soc_system:u0|sound6_pio_export[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "soc_system:u0|x_export[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "soc_system:u0|x_export[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "soc_system:u0|x_export[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "soc_system:u0|x_export[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "soc_system:u0|x_export[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "soc_system:u0|x_export[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "soc_system:u0|x_export[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "soc_system:u0|x_export[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "soc_system:u0|x_export[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "soc_system:u0|x_export[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "soc_system:u0|x_export[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "soc_system:u0|x_export[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "soc_system:u0|x_export[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "soc_system:u0|x_export[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "soc_system:u0|x_export[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "soc_system:u0|x_export[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "soc_system:u0|x_export[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "soc_system:u0|x_export[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "soc_system:u0|x_export[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "soc_system:u0|x_export[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "soc_system:u0|x_export[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "soc_system:u0|x_export[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "soc_system:u0|x_export[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "soc_system:u0|x_export[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "soc_system:u0|x_export[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "soc_system:u0|x_export[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "soc_system:u0|x_export[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "soc_system:u0|x_export[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "soc_system:u0|x_export[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "soc_system:u0|x_export[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "soc_system:u0|x_export[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "soc_system:u0|x_export[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "soc_system:u0|y_export[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "soc_system:u0|y_export[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "soc_system:u0|y_export[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "soc_system:u0|y_export[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "soc_system:u0|y_export[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "soc_system:u0|y_export[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "soc_system:u0|y_export[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "soc_system:u0|y_export[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "soc_system:u0|y_export[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "soc_system:u0|y_export[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "soc_system:u0|y_export[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "soc_system:u0|y_export[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "soc_system:u0|y_export[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "soc_system:u0|y_export[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "soc_system:u0|y_export[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "soc_system:u0|y_export[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "soc_system:u0|y_export[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "soc_system:u0|y_export[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "soc_system:u0|y_export[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "soc_system:u0|y_export[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "soc_system:u0|y_export[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "soc_system:u0|y_export[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "soc_system:u0|y_export[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "soc_system:u0|y_export[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "soc_system:u0|y_export[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "soc_system:u0|y_export[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "soc_system:u0|y_export[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "soc_system:u0|y_export[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "soc_system:u0|y_export[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "soc_system:u0|y_export[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "soc_system:u0|y_export[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "soc_system:u0|y_export[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "vpg:u_vpg|point_x[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "vpg:u_vpg|point_x[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "vpg:u_vpg|point_x[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "vpg:u_vpg|point_x[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "vpg:u_vpg|point_x[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "vpg:u_vpg|point_x[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "vpg:u_vpg|point_x[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "vpg:u_vpg|point_x[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "vpg:u_vpg|point_x[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "vpg:u_vpg|point_x[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "vpg:u_vpg|point_y[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "vpg:u_vpg|point_y[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "vpg:u_vpg|point_y[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "vpg:u_vpg|point_y[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "vpg:u_vpg|point_y[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "vpg:u_vpg|point_y[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[96] -to "vpg:u_vpg|point_y[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[97] -to "vpg:u_vpg|point_y[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[98] -to "vpg:u_vpg|point_y[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[99] -to "vpg:u_vpg|point_y[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[100] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[101] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[102] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[103] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[104] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[105] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[106] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[107] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[108] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[109] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[110] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[111] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|h_count[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[112] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|num_en1" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[113] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|num_en2" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[114] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|num_en3" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[115] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[116] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[117] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[118] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[119] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[120] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[121] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[122] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[123] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[124] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[125] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[126] -to "vpg:u_vpg|vga_generator_new:u_vga_generator|v_count[9]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=127" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=127" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=127" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=405" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

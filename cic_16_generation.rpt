@@ -1,0 +1,50 @@
+Info: Starting: Create simulation model
+Info: qsys-generate D:\Altera_intel\Project\DE10_nano_test3\cic_16.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\Altera_intel\Project\DE10_nano_test3\simulation --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading DE10_nano_test3/cic_16.qsys
+Progress: Reading input file
+Progress: Adding cic_ii_0 [altera_cic_ii 17.1]
+Progress: Parameterizing module cic_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: cic_16: Generating cic_16 "cic_16" for SIM_VERILOG
+Info: cic_ii_0: "cic_16" instantiated altera_cic_ii "cic_ii_0"
+Info: cic_16: Done "cic_16" with 2 modules, 60 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\Altera_intel\Project\DE10_nano_test3\cic_16.spd --output-directory=D:/Altera_intel/Project/DE10_nano_test3/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\Altera_intel\Project\DE10_nano_test3\cic_16.spd --output-directory=D:/Altera_intel/Project/DE10_nano_test3/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/Altera_intel/Project/DE10_nano_test3/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in D:/Altera_intel/Project/DE10_nano_test3/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/Altera_intel/Project/DE10_nano_test3/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/Altera_intel/Project/DE10_nano_test3/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/Altera_intel/Project/DE10_nano_test3/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Altera_intel\Project\DE10_nano_test3\cic_16.qsys --synthesis=VERILOG --output-directory=D:\Altera_intel\Project\DE10_nano_test3\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading DE10_nano_test3/cic_16.qsys
+Progress: Reading input file
+Progress: Adding cic_ii_0 [altera_cic_ii 17.1]
+Progress: Parameterizing module cic_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: cic_16: Generating cic_16 "cic_16" for QUARTUS_SYNTH
+Info: cic_ii_0: "cic_16" instantiated altera_cic_ii "cic_ii_0"
+Info: cic_16: Done "cic_16" with 2 modules, 30 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
