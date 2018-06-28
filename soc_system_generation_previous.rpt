@@ -1,0 +1,149 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\quartus17.1projects\blink2\soc_system.qsys --synthesis=VERILOG --output-directory=E:\quartus17.1projects\blink2\soc_system\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading blink2/soc_system.qsys
+Progress: Reading input file
+Progress: Adding button_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module button_pio
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clk_for_data [altera_avalon_pio 17.1]
+Progress: Parameterizing module clk_for_data
+Progress: Adding default_16b [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module default_16b
+Progress: Adding hps_0 [altera_hps 17.1]
+Progress: Parameterizing module hps_0
+Progress: Adding l_x [altera_avalon_pio 17.1]
+Progress: Parameterizing module l_x
+Progress: Adding l_y [altera_avalon_pio 17.1]
+Progress: Parameterizing module l_y
+Progress: Adding led_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module led_pio
+Progress: Adding master_0 [altera_jtag_avalon_master 17.1]
+Progress: Parameterizing module master_0
+Progress: Adding sound1_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module sound1_pio
+Progress: Adding sound2_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module sound2_pio
+Progress: Adding sound3_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module sound3_pio
+Progress: Adding sound4_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module sound4_pio
+Progress: Adding sound5_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module sound5_pio
+Progress: Adding sound6_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module sound6_pio
+Progress: Adding switch_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module switch_pio
+Progress: Adding system_id [altera_avalon_sysid_qsys 17.1]
+Progress: Parameterizing module system_id
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.clk_for_data: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 63
+Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: soc_system.sound1_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.sound2_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.sound3_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.sound4_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.sound5_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.sound6_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.switch_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.system_id: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: soc_system.system_id: Time stamp will be automatically updated when this component is generated.
+Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: button_pio: Starting RTL generation for module 'soc_system_button_pio'
+Info: button_pio:   Generation command is [exec D:/intelfpga_standard/17.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_standard/17.1/quartus/bin64/perl/lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0002_button_pio_gen/ --quartus_dir=D:/intelfpga_standard/17.1/quartus --verilog --config=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0002_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: button_pio: Done RTL generation for module 'soc_system_button_pio'
+Info: button_pio: "soc_system" instantiated altera_avalon_pio "button_pio"
+Info: default_16b: Starting RTL generation for module 'soc_system_default_16b'
+Info: default_16b:   Generation command is [exec D:/intelfpga_standard/17.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_standard/17.1/quartus/bin64/perl/lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_default_16b --dir=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0003_default_16b_gen/ --quartus_dir=D:/intelfpga_standard/17.1/quartus --verilog --config=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0003_default_16b_gen//soc_system_default_16b_component_configuration.pl  --do_build_sim=0  ]
+Info: default_16b: Done RTL generation for module 'soc_system_default_16b'
+Info: default_16b: "soc_system" instantiated altera_avalon_onchip_memory2 "default_16b"
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: HPS Main PLL counter settings: n = 0  m = 63
+Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: l_x: Starting RTL generation for module 'soc_system_l_x'
+Info: l_x:   Generation command is [exec D:/intelfpga_standard/17.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_standard/17.1/quartus/bin64/perl/lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_l_x --dir=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0004_l_x_gen/ --quartus_dir=D:/intelfpga_standard/17.1/quartus --verilog --config=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0004_l_x_gen//soc_system_l_x_component_configuration.pl  --do_build_sim=0  ]
+Info: l_x: Done RTL generation for module 'soc_system_l_x'
+Info: l_x: "soc_system" instantiated altera_avalon_pio "l_x"
+Info: led_pio: Starting RTL generation for module 'soc_system_led_pio'
+Info: led_pio:   Generation command is [exec D:/intelfpga_standard/17.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_standard/17.1/quartus/bin64/perl/lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0005_led_pio_gen/ --quartus_dir=D:/intelfpga_standard/17.1/quartus --verilog --config=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0005_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio: Done RTL generation for module 'soc_system_led_pio'
+Info: led_pio: "soc_system" instantiated altera_avalon_pio "led_pio"
+Info: master_0: "soc_system" instantiated altera_jtag_avalon_master "master_0"
+Info: sound1_pio: Starting RTL generation for module 'soc_system_sound1_pio'
+Info: sound1_pio:   Generation command is [exec D:/intelfpga_standard/17.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_standard/17.1/quartus/bin64/perl/lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_sound1_pio --dir=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0006_sound1_pio_gen/ --quartus_dir=D:/intelfpga_standard/17.1/quartus --verilog --config=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0006_sound1_pio_gen//soc_system_sound1_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: sound1_pio: Done RTL generation for module 'soc_system_sound1_pio'
+Info: sound1_pio: "soc_system" instantiated altera_avalon_pio "sound1_pio"
+Info: switch_pio: Starting RTL generation for module 'soc_system_switch_pio'
+Info: switch_pio:   Generation command is [exec D:/intelfpga_standard/17.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_standard/17.1/quartus/bin64/perl/lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_standard/17.1/quartus/sopc_builder/bin -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_standard/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_switch_pio --dir=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0007_switch_pio_gen/ --quartus_dir=D:/intelfpga_standard/17.1/quartus --verilog --config=C:/Users/rebeater/AppData/Local/Temp/alt7684_1490324465296308082.dir/0007_switch_pio_gen//soc_system_switch_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: switch_pio: Done RTL generation for module 'soc_system_switch_pio'
+Info: switch_pio: "soc_system" instantiated altera_avalon_pio "switch_pio"
+Info: system_id: "soc_system" instantiated altera_avalon_sysid_qsys "system_id"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: master_0_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "master_0_master_translator"
+Info: default_16b_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "default_16b_s1_translator"
+Info: hps_0_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: master_0_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "master_0_master_agent"
+Info: default_16b_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "default_16b_s1_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: master_0_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "master_0_master_limiter"
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: default_16b_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "default_16b_s1_burst_adapter"
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: hps_0_h2f_axi_master_wr_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "hps_0_h2f_axi_master_wr_rsp_width_adapter"
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file E:/quartus17.1projects/blink2/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: soc_system: Done "soc_system" with 46 modules, 112 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
